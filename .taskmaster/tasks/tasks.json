@@ -1,0 +1,240 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup Project Repository and Tooling",
+        "description": "Initialize the Cuarzo SPA project repository with React.js (v18+), TypeScript (v5+), and configure ESLint, Prettier, and Husky for code quality and pre-commit hooks.",
+        "details": "Use create-react-app or Vite (recommended for speed) with TypeScript template. Configure ESLint (latest Airbnb config), Prettier, and Husky for pre-commit linting. Set up GitHub Actions for CI/CD. Ensure Node.js v18+ compatibility.",
+        "testStrategy": "Verify repository initializes correctly, linting and formatting run on commit, and CI pipeline passes with a sample commit.",
+        "priority": "high",
+        "dependencies": [],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Configure Styling and Design System",
+        "description": "Establish the design system using Tailwind CSS (v3.4+) for utility-first styling, and set up global theme variables for colors, typography, and spacing.",
+        "details": "Install Tailwind CSS and configure with PostCSS. Define color palette, typography, and spacing based on PDF mockup. Use Tailwind's config for custom themes. Document design tokens for developer reference.",
+        "testStrategy": "Check that global styles apply correctly, custom theme tokens are accessible, and responsive breakpoints work as intended.",
+        "priority": "high",
+        "dependencies": [1],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Implement Routing and Navigation",
+        "description": "Set up React Router (v6+) for SPA navigation, including smooth scroll and active state management for all five sections.",
+        "details": "Install react-router-dom. Define routes for each section. Implement smooth scrolling using scroll-behavior: smooth and Framer Motion for transitions. Ensure navigation menu (hamburger/full) is accessible and responsive.",
+        "testStrategy": "Test navigation between sections, verify smooth scroll and active state highlight, and confirm accessibility with keyboard navigation.",
+        "priority": "high",
+        "dependencies": [1, 2],
+        "status": "done",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Develop Header and Hero Section",
+        "description": "Create the header (branding, navigation) and hero section with headline, subtitle, CTA, and animated background image/video according to the MAQUETA_WEB_CUARZO_16.9.pdf mockup.",
+        "status": "in-progress",
+        "dependencies": [2, 3],
+        "priority": "high",
+        "details": "Build modular Header and Hero components that precisely match the PDF mockup design. Implement exact colors, typography, layout, and visual elements as specified in the mockup. Use Framer Motion for entrance animations. Integrate responsive background image/video using <picture> or video tag. Ensure CTA button triggers scroll to next section. Pay special attention to spacing, font sizes, and visual hierarchy from the mockup.",
+        "testStrategy": "Validate layout matches the mockup exactly on all devices. Compare implementation against PDF design for pixel-perfect accuracy. Check animation smoothness, and confirm CTA scrolls correctly. Verify all colors, typography, and visual elements match the design specifications.",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Analyze PDF mockup for header and hero specifications",
+            "description": "Extract exact design specifications from MAQUETA_WEB_CUARZO_16.9.pdf including colors, typography, spacing, and visual elements.",
+            "status": "done",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Implement header component with exact branding and navigation",
+            "description": "Create header component matching the mockup design with correct logo placement, navigation items, and mobile responsiveness.",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-09-05T19:07:53.327Z>\nHeader component implemented according to PDF mockup specifications. Logo correctly positioned on left side with proper sizing and spacing. Navigation menu features both mobile hamburger menu for small screens and full desktop navigation with Spanish labels. Client requested modification to remove text labels, keeping only the logo as shown in the original design. Final implementation includes dark gray navigation bars, white header background area, and teal accent line at the bottom of the header. Component is fully responsive and matches the mockup with pixel-perfect accuracy across all screen sizes.\n</info added on 2025-09-05T19:07:53.327Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Develop hero section with precise layout and content",
+            "description": "Build hero section with headline, subtitle, and CTA matching the exact wording, font sizes, and positioning from the mockup.",
+            "status": "done",
+            "dependencies": [],
+            "details": "<info added on 2025-09-05T19:16:22.750Z>\nHero section implemented to match the exact PDF design. Features include construction site background image, main headline \"Soluciones que transforman infraestructura en valor\", company description, ISO certification logos (Nexfid and ABA), achievement list with custom bullet icons, and proper gradient background. All text content matches the provided Spanish copy exactly. Component is fully responsive and includes smooth Framer Motion animations for enhanced user experience.\n</info added on 2025-09-05T19:16:22.750Z>",
+            "testStrategy": ""
+          },
+          {
+            "id": 4,
+            "title": "Integrate background image/video as shown in mockup",
+            "description": "Implement the exact background treatment (image or video) as specified in the mockup, ensuring proper responsiveness.",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 5,
+            "title": "Add entrance animations with Framer Motion",
+            "description": "Apply appropriate entrance animations that complement the design while maintaining the visual integrity of the mockup.",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 6,
+            "title": "Implement CTA functionality",
+            "description": "Ensure CTA button has the exact styling from the mockup and triggers scroll to the next section.",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          },
+          {
+            "id": 7,
+            "title": "Create design comparison documentation",
+            "description": "Document how implementation matches the mockup specifications with side-by-side comparisons.",
+            "status": "pending",
+            "dependencies": [],
+            "details": "",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Build About/Features Section",
+        "description": "Develop the About section with feature cards, icons, descriptive text, and animated counters/progress bars.",
+        "details": "Create reusable FeatureCard component. Use Heroicons or SVGs for icons. Implement animated counters/progress bars with React Spring. Add scroll-triggered animations for card entrance.",
+        "testStrategy": "Verify feature cards render responsively, counters animate on scroll, and hover effects work.",
+        "priority": "medium",
+        "dependencies": [2, 3],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Create Services/Products Section",
+        "description": "Implement the Services section with product/service cards, images, pricing, action buttons, and filtering/sorting functionality.",
+        "details": "Design ServiceCard component. Use React Context or Redux Toolkit for state management of filters. Implement modal windows for detailed views using React Portal. Add smooth transitions with Framer Motion.",
+        "testStrategy": "Test filtering/sorting logic, modal open/close, and responsive layout. Validate transitions and accessibility.",
+        "priority": "medium",
+        "dependencies": [2, 3],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Develop Testimonials/Reviews Section",
+        "description": "Build the Testimonials section with carousel/slider, star ratings, customer avatars, and company logos.",
+        "details": "Use Swiper.js or Embla Carousel for performant, accessible carousel. Create TestimonialCard component. Integrate auto-rotation and manual controls. Animate transitions with Framer Motion.",
+        "testStrategy": "Check carousel auto-rotation, manual navigation, and smooth transitions. Validate star ratings and avatar display.",
+        "priority": "medium",
+        "dependencies": [2, 3],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Implement Contact/Footer Section",
+        "description": "Create the Contact section with validated form, contact info, social media links, newsletter signup, and legal/footer links.",
+        "details": "Build ContactForm component with React Hook Form (v7+) for validation. Integrate SendGrid API for email. Add Mailchimp API for newsletter. Ensure WCAG 2.1 AA accessibility. Use SVG icons for social links.",
+        "testStrategy": "Test form validation, email delivery, newsletter signup, and accessibility (keyboard, screen reader).",
+        "priority": "high",
+        "dependencies": [2, 3],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Integrate State Management",
+        "description": "Set up global state management for filters, modals, and user interactions using Redux Toolkit or React Context API.",
+        "details": "Implement Redux Toolkit (recommended for scalability) with slices for services, testimonials, and UI state. Use Redux Persist for session storage if needed. Document state shape and actions.",
+        "testStrategy": "Write unit tests for reducers/selectors. Validate state updates on user actions and persistence across reloads.",
+        "priority": "medium",
+        "dependencies": [6, 7],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Add Animations and Micro-interactions",
+        "description": "Enhance UI with scroll-triggered animations, hover effects, and smooth transitions using Framer Motion and React Spring.",
+        "details": "Apply Framer Motion for section transitions and entrance effects. Use React Spring for counters and progress bars. Optimize for performance by lazy-loading animation components.",
+        "testStrategy": "Profile animation performance, check for jank, and validate all micro-interactions on desktop/mobile.",
+        "priority": "medium",
+        "dependencies": [4, 5, 6, 7],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Optimize Performance and SEO",
+        "description": "Implement performance optimizations (code splitting, lazy loading, CDN) and SPA-specific SEO best practices (meta tags, prerendering).",
+        "details": "Use React.lazy and Suspense for code splitting. Integrate CDN (Vercel/Netlify). Add meta tags per route with react-helmet-async. Use prerendering (e.g., Vercel Edge Functions) for SEO. Target <3s load time and >90 Lighthouse score.",
+        "testStrategy": "Run Lighthouse audits, test load times, and verify meta tags and prerendered content are indexed by search engines.",
+        "priority": "high",
+        "dependencies": [4, 5, 6, 7, 10],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Integrate Third-party Services",
+        "description": "Connect SendGrid for contact form, Mailchimp for newsletter, Google Analytics for tracking, and social media APIs for sharing.",
+        "details": "Configure SendGrid API (v3) for email delivery. Set up Mailchimp API for newsletter. Add Google Analytics 4 via gtag.js. Integrate social media share buttons using react-share. Secure API keys via environment variables.",
+        "testStrategy": "Test email delivery, newsletter subscription, analytics event tracking, and social sharing on all platforms.",
+        "priority": "high",
+        "dependencies": [8, 11],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Implement Accessibility and Cross-browser Support",
+        "description": "Ensure WCAG 2.1 AA compliance and compatibility with Chrome, Firefox, Safari, and Edge (last 2 versions).",
+        "details": "Use axe-core for automated accessibility testing. Manually test keyboard navigation, ARIA roles, and color contrast. Validate on BrowserStack for cross-browser/device support.",
+        "testStrategy": "Run axe-core and Lighthouse accessibility audits. Manually test on supported browsers/devices.",
+        "priority": "high",
+        "dependencies": [4, 5, 6, 7, 8, 10],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "Setup Hosting, CDN, Domain, and SSL",
+        "description": "Deploy the SPA to Vercel (recommended), configure CDN, set up custom domain, and enable HTTPS with SSL certificate.",
+        "details": "Connect GitHub repo to Vercel. Configure CDN for assets. Register custom domain and set up DNS. Enable SSL via Vercel dashboard. Test deployment pipeline for zero-downtime updates.",
+        "testStrategy": "Verify deployment, CDN asset delivery, domain resolution, and SSL certificate validity.",
+        "priority": "high",
+        "dependencies": [11],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Comprehensive Testing and Bug Fixes",
+        "description": "Conduct end-to-end, integration, and unit testing across all features. Fix bugs and polish UI/UX for final release.",
+        "details": "Use Jest and React Testing Library for unit/integration tests. Cypress for end-to-end flows. Perform manual QA for edge cases and device compatibility. Document all resolved issues.",
+        "testStrategy": "Ensure all tests pass, no critical bugs remain, and UI/UX meets design specs on all supported devices.",
+        "priority": "high",
+        "dependencies": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-09-05T18:01:51.383Z",
+      "updated": "2025-09-05T19:16:24.451Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
