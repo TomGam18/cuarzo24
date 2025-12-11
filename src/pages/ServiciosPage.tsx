@@ -140,7 +140,7 @@ const ServiciosPage = () => (
     </motion.div>
 
     <motion.section
-      className="mx-auto mt-6 flex w-full max-w-5xl flex-col gap-6 px-6 text-left md:mt-16 md:gap-10 md:px-10"
+      className="mx-auto mt-6 flex w-full max-w-5xl flex-col gap-3 px-6 text-left md:mt-8 md:gap-5 md:px-10"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
@@ -148,11 +148,18 @@ const ServiciosPage = () => (
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
       <motion.header
-        className="space-y-3 text-left md:space-y-4"
+        className="space-y-3 text-left md:space-y-5"
         variants={fadeUp}
       >
+        <motion.h2
+          className="hidden text-3xl font-semibold text-brand-footer md:block md:text-4xl"
+          variants={fadeUp}
+          transition={{ delay: 0.05 }}
+        >
+          Mantenimiento
+        </motion.h2>
         <motion.p
-          className="w-full text-lg font-medium leading-snug text-brand-nav md:w-3/5 md:text-lg md:leading-relaxed md:text-gray-700"
+          className="w-full text-lg font-medium leading-snug text-brand-nav md:w-4/5 md:text-xl md:leading-relaxed md:text-gray-700"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
@@ -236,7 +243,7 @@ const ServiciosPage = () => (
     </motion.div>
 
     <motion.section
-      className="mx-auto mt-6 flex w-full max-w-5xl flex-col gap-6 px-6 text-left md:mt-8 md:gap-10 md:pb-16 md:px-10"
+      className="mx-auto mt-6 flex w-full max-w-5xl flex-col gap-3 px-6 text-left md:mt-8 md:gap-5 md:pb-16 md:px-10"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
@@ -244,7 +251,7 @@ const ServiciosPage = () => (
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
       <motion.header
-        className="space-y-3 text-left md:space-y-4"
+        className="space-y-3 text-left md:space-y-5"
         variants={fadeUp}
       >
         <motion.h2
@@ -265,7 +272,7 @@ const ServiciosPage = () => (
       </motion.header>
 
       <motion.ul
-        className="mt-4 space-y-1 text-base leading-snug text-brand-nav md:text-lg md:leading-relaxed md:text-gray-700"
+        className="space-y-1 text-base leading-snug text-brand-nav md:text-lg md:leading-relaxed md:text-gray-700"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
@@ -296,7 +303,7 @@ const ServiciosPage = () => (
       </motion.ul>
 
       <motion.div
-        className="mt-4 w-full space-y-3 text-base leading-snug text-brand-nav md:w-4/6 md:space-y-4 md:text-lg md:leading-relaxed md:text-gray-700"
+        className="w-full space-y-1 text-base leading-snug text-brand-nav md:w-4/6 md:text-lg md:leading-relaxed md:text-gray-700"
         variants={fadeUp}
         transition={{ delay: 0.25, duration: 0.6, ease: 'easeOut' }}
       >
@@ -314,7 +321,7 @@ const ServiciosPage = () => (
     </motion.section>
 
     <motion.div
-      className="relative"
+      className="relative mt-12"
       initial={{ opacity: 0, scale: 0.98 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -346,7 +353,7 @@ const ServiciosPage = () => (
     </motion.div>
 
     <motion.section
-      className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-16 text-left md:gap-8 md:px-10"
+      className="mx-auto mt-6 flex w-full max-w-4xl flex-col gap-3 px-6 text-left md:mt-8 md:gap-4 md:px-10"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}

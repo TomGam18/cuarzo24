@@ -13,7 +13,11 @@ const Header = () => {
     { id: 'home', label: 'Home', href: '/' },
     { id: 'quienes-somos', label: 'Quienes Somos', href: '/quienes-somos' },
     { id: 'servicios', label: 'Servicios', href: '/servicios' },
-    { id: 'obras', label: 'Obras', href: '/obras' },
+    {
+      id: 'certificaciones',
+      label: 'Certificaciones',
+      href: '/certificaciones',
+    },
     { id: 'contacto', label: 'Contacto', href: '/contacto' },
   ];
 

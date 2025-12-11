@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import QuienesSomosPage from './pages/QuienesSomosPage';
 import ServiciosPage from './pages/ServiciosPage';
 import ContactoPage from './pages/ContactoPage';
-import ObrasPage from './pages/ObrasPage';
+import CertificacionesPage from './pages/CertificacionesPage';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/quienes-somos" element={<QuienesSomosPage />} />
           <Route path="/servicios" element={<ServiciosPage />} />
-          <Route path="/obras" element={<ObrasPage />} />
+          <Route path="/certificaciones" element={<CertificacionesPage />} />
           <Route path="/contacto" element={<ContactoPage />} />
         </Routes>
       </Layout>
