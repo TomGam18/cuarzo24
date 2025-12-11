@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import BackgroundImageBlock from '@/components/BackgroundImageBlock';
 import homeHeroImage from '@/assets/home-1.jpg';
 import homeCertificatesImage from '@/assets/home-2.png';
@@ -117,9 +118,12 @@ const HomePage = () => {
               </span>
             </p>
             <div className="flex justify-center">
-              <button className="bg-brand-accent px-6 py-3 text-sm font-semibold uppercase text-white transition-colors duration-200 hover:bg-brand-accent/80">
+              <Link
+                to="/certificaciones"
+                className="inline-block bg-brand-accent px-6 py-3 text-sm font-semibold uppercase text-white transition-colors duration-200 hover:bg-brand-accent/80"
+              >
                 Ver más
-              </button>
+              </Link>
             </div>
           </div>
         </div>
